@@ -23,7 +23,7 @@
 			$querycorr->execute(['cor' =>$cor]);
 
 			foreach ($querycorr as $rows) {
-				if ($cor === $rows['usuario'] && password_verify($pass, $rows['contrasena']))
+				if ($cor === $rows['correo'] && password_verify($pass, $rows['contrasena']))
 					return true;
 				else 
 					return false;
